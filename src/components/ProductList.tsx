@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Product } from "../interfaces/Product.ts";
+// ADDED the 'type' keyword here:
+import type { Product } from "../interfaces/Product.ts";
 
 // Flexbox styling from Lec-2
 const AllProductsDiv = styled.div`

@@ -1,7 +1,8 @@
 import ProductList from "./components/ProductList.tsx";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { Product } from "./interfaces/Product.ts";
+// ADDED the 'type' keyword here:
+import type { Product } from "./interfaces/Product.ts";
 
 const ParentDiv = styled.div`
     width: 80vw;
@@ -30,7 +31,7 @@ export default function App() {
             .catch((e: Error) => {
                 console.log("There was the error: " + e);
             });
-    }, [data.length]); // Keeping the exact dependency array from the original MP-2
+    }, [data.length]);
 
     return (
         <ParentDiv>
